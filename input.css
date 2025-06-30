@@ -1,0 +1,260 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Dana";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./fonts/DanaFaNum-Regular.ttf");
+}
+@font-face {
+  font-family: "Dana";
+  font-weight: 500;
+  font-style: normal;
+  src: url("./fonts/DanaFaNum-Medium.ttf");
+}
+@font-face {
+  font-family: "Dana";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./fonts/DanaFaNum-Bold.ttf");
+}
+
+html,
+* {
+  font-family: "Dana", sans-serif !important;
+}
+
+:root {
+  /* Primary Colors */
+  --primary-950: #e36611;
+  --primary-900: #fa7d28;
+  --primary-800: #fd9a2d;
+  --primary-700: #feaa31;
+  --primary-600: #ffbc35;
+  --primary-500: #ffc93b;
+  --primary-400: #ffd147;
+  --primary-300: #ffdb63;
+  --primary-200: #ffe48e;
+  --primary-100: #fffaba;
+  --primary-50: #fff9e4;
+
+  /* Secondary Colors */
+  --secondary-950: #115762;
+  --secondary-900: #1d6975;
+  --secondary-800: #2d7d8a;
+  --secondary-700: #3291a2;
+  --secondary-600: #38a6bc;
+  --secondary-500: #3cbc6f;
+  --secondary-400: #45c0d7;
+  --secondary-300: #5ccbd7;
+  --secondary-200: #86dae9;
+  --secondary-100: #b5e9f2;
+  --secondary-50: #e1f6fa;
+
+  /* Zinc Colors */
+  --zinc-950: #09090b;
+  --zinc-900: #18181b;
+  --zinc-800: #27272a;
+  --zinc-700: #3f3f46;
+  --zinc-600: #52525b;
+  --zinc-500: #71717a;
+  --zinc-400: #a1a1aa;
+  --zinc-300: #d4d4d8;
+  --zinc-200: #e4e4e7;
+  --zinc-100: #f4f4f5;
+  --zinc-50: #fafafa;
+}
+footer .social-media a {
+  overflow: hidden;
+  width: 34px;
+  height: 34px;
+}
+footer .social-media a svg {
+  z-index: 2;
+}
+footer .social-media a::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background-color: var(--secondary-950);
+  border-radius: 50%;
+  z-index: 0;
+  transition: all 0.2s ease-in-out;
+  transform: translateX(40px);
+}
+footer .social-media a:hover::before {
+  transform: translateX(0px) !important;
+}
+footer .social-media a:hover svg path {
+  fill: var(--primary-800) !important;
+}
+footer .social-media a:hover svg {
+  width: 24px;
+  height: 24px;
+}
+footer .social-media a svg {
+  transition: all 0.2s ease-in-out;
+}
+@media not all and (min-width: 640px) {
+  .gradiant1 {
+    background: linear-gradient(180deg, #ffb41d 0%, #ffbc35 100%);
+  }
+}
+.animation-1 {
+  animation: bounce-in-right 3s ease;
+}
+@keyframes bounce-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.tour-card {
+  background: linear-gradient(0deg, #ffffff 0%, #faf3e1 100%);
+}
+.filter-blur {
+  backdrop-filter: blur(10px);
+}
+.gradiant2 {
+  background: linear-gradient(270deg, #e59d00 0%, rgba(255, 196, 34, 0) 100%);
+}
+.des-card:hover svg path {
+  fill: var(--primary-800);
+}
+.common-question .box.active #answer {
+  display: flex !important;
+  padding-bottom: 25px;
+  animation: fadeIn 0.2s ease-in-out forwards;
+}
+.common-question .box #answer,
+.common-question .box span {
+  transition: all 0.3s ease-in-out;
+}
+.common-question .box.active span {
+  transform: rotate(180deg) scale(1.4);
+}
+.common-question .box.active .group-hover\:animate-spin {
+  animation: spin 1s linear infinite;
+}
+.common-question .box.active .group-hover\:animate-spin svg {
+  width: 35px;
+  height: 35px;
+}
+.header-menu {
+  z-index: 50;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.mob-destination .parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.4fr 0.4fr 0.4fr 0.4fr;
+  gap: 8px;
+  grid-template-areas:
+    "a b"
+    "c b"
+    "c d"
+    "f f";
+}
+.mob-destination .parent div:nth-child(1) {
+  grid-area: a;
+}
+.mob-destination .parent div:nth-child(2) {
+  grid-area: b;
+}
+
+.mob-destination .parent div:nth-child(3) {
+  grid-area: c;
+}
+
+.mob-destination .parent div:nth-child(4) {
+  grid-area: d;
+}
+
+.mob-destination .parent div:nth-child(5) {
+  grid-area: f;
+}
+.mob-destination .parent img {
+  width: 100%;
+  height: 100%;
+}
+.gradiant3 {
+  background: linear-gradient(180deg, #f8f8f8 0%, #f5f5f5 100%);
+}
+.loader img {
+  animation: pulse 1s infinite ease-in-out alternate;
+  width: 60px;
+  height: 60px;
+}
+.loader {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.loader::before {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: linear-gradient(
+    180deg,
+    var(--primary-950) 0%,
+    var(--secondary-950) 100%
+  );
+  border-radius: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  content: "";
+  animation: spin 1s infinite linear;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loader span {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 3;
+  overflow: hidden;
+}
+@keyframes pulse {
+  from {
+    transform: scale(0.67);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
