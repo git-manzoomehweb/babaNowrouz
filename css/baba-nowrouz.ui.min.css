@@ -6538,3 +6538,13 @@ video {
     height: 56px;
   }
 }
+#search-box .plus-count div,
+#search-box .plus-count span.count-icon-simple,
+#search-box .minus-count div,
+#search-box .minus-count span.count-icon-simple {
+  width: 100% !important;
+  height: 100% !important ;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
