@@ -974,19 +974,8 @@ input {
     width: 91%;
     margin: 0 auto;
   }
-  .Basis_Calendar .month,
-  .Basis_Calendar .year,
-  .Basis_Calendar_Box {
-    left: 0;
-    margin: 0 auto;
-    width: 95% !important;
-  }
-  .Basis_Calendar_Box {
-    left: 0 !important;
-    right: 0 !important;
-    margin: 0 auto;
-    margin-top: 4rem;
-  }
+ 
+  
   .Basis_Calendar .date_info_selected {
     display: block !important;
     width: 100% !important;
@@ -995,9 +984,7 @@ input {
     margin: 0 auto;
     color: #000 !important;
   }
-  .Basis_Calendar_Box::before {
-    left: 3em !important;
-  }
+   
 }
 .Basis_Calendar_Box .month_name {
   background: var(--primary-600) !important;
@@ -1018,6 +1005,7 @@ input {
 .searchHistory-content.fa-lang .sub-title {
   color: var(--neutral-950);
 }
+.searchHistory-content{display: none !important;}
 .route-minus-btn:hover {
   background-color: var(--error-100);
   cursor: pointer;
@@ -2714,3 +2702,6 @@ body.tour .tour-bg {
 body.insurance .insurance-bg {
   display: block !important;
 }
+
+
+
