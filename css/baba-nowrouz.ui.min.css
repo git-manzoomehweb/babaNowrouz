@@ -6408,7 +6408,10 @@ video {
   }
   #search-box #r-train .reserve-field.h-20.departure-route,
   #search-box #r-train .reserve-field.h-20.destination-route {
-    width: 25% !important;
+    width: 50% !important;
+  }
+  #search-box #r-train .reserve-field.h-20.departure-route{
+    padding-left: 20px !important;
   }
   #search-box .add-routs {
     margin-right: -140px !important;
@@ -6563,3 +6566,4 @@ video {
   align-items: center;
   justify-content: center;
 }
+
