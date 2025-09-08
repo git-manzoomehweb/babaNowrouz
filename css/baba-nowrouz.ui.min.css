@@ -6393,6 +6393,9 @@ video {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
 }
+.Basis_Date_Box  p{
+  display: none !important;
+}
 @media (min-width: 1024px) {
   #search-box .Flightclass-Passenger .passengerbox {
     width: 204% !important;
