@@ -1,91 +1,43 @@
-<header class="w-full flex justify-center header-landing-items">
-  <div
-    dir="rtl"
-    class="px-5 w-full h-[84px] lg:px-5 xl:w-[1280px] xl:!px-0 flex !justify-between items-center"
-  >
+<header class="w-full flex justify-center bg-white header-landing-items">
+  <div dir="rtl" class="px-5 w-full h-[84px] lg:px-5 xl:w-[1280px] xl:!px-0 flex !justify-between items-center">
     <div dir="rtl" class="login flex items-center gap-2">
       <button type="button" class="lg:!hidden bars3">
-        <svg
-          width="22"
-          height="18"
-          viewBox="0 0 22 18"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M21 1L1 0.999998"
-            stroke="#1D6975"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-          <path
-            d="M21 9L1 9"
-            stroke="#1D6975"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-          <path
-            d="M21 17L1 17"
-            stroke="#1D6975"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
+        <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 1L1 0.999998" stroke="#1D6975" stroke-width="2" stroke-linecap="round" />
+          <path d="M21 9L1 9" stroke="#1D6975" stroke-width="2" stroke-linecap="round" />
+          <path d="M21 17L1 17" stroke="#1D6975" stroke-width="2" stroke-linecap="round" />
         </svg>
       </button>
       <div
-        class="Login_Information justify-center items-center flex gap-1 whitespace-nowrap w-[163px] h-12 bg-primary-900 rounded-lg"
-      >
+        class="Login_Information justify-center items-center flex gap-1 whitespace-nowrap w-[163px] h-12 bg-primary-900 rounded-lg">
         <basis core="call" file="authentication/modal"></basis>
       </div>
       <!-- ورودثبتنام -->
     </div>
-    <div dir="rtl" class="lg:!flex hidden gap-[59px] items-center">
-      <p
-        data-id="flight"
-        data-nav="flight"
-        onclick="check_searchHistory('flight'); check_landing('flight')"
-        class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out"
-      >
+    <nav dir="rtl" class="lg:!flex hidden gap-[59px] items-center">
+      <p data-id="flight" data-nav="flight" onclick="check_searchHistory('flight'); check_landing('flight')"
+        class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out">
         پرواز
       </p>
-      <p
-        data-id="hotel"
-        data-nav="hotel"
-        onclick="check_searchHistory('hotel'); check_landing('hotel')"
-        class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out"
-      >
+      <p data-id="hotel" data-nav="hotel" onclick="check_searchHistory('hotel'); check_landing('hotel')"
+        class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out">
         هتل
       </p>
-      <p
-        data-id="flighthotel"
-        data-nav="flighthotel"
+      <p data-id="flighthotel" data-nav="flighthotel"
         onclick="check_searchHistory('flighthotel'); check_landing('flighthotel')"
-        class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out"
-      >
+        class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out">
         پرواز + هتل
       </p>
-      <p
-        data-id="tour"
-        data-nav="tour"
-        onclick="check_searchHistory('tour'); check_landing('tour')"
-        class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out"
-      >
+      <p data-id="tour" data-nav="tour" onclick="check_searchHistory('tour'); check_landing('tour')"
+        class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out">
         تور
       </p>
-      <p
-        data-id="train"
-        data-nav="train"
-        onclick="check_searchHistory('train'); check_landing('train')"
-        class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out"
-      >
+      <p data-id="train" data-nav="train" onclick="check_searchHistory('train'); check_landing('train')"
+        class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out">
         قطار
       </p>
-      <p
-        data-id="insurance"
-        data-nav="insurance"
-        onclick="check_searchHistory('insurance'); check_landing('insurance')"
-        class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out"
-      >
+      <p data-id="insurance" data-nav="insurance" onclick="check_searchHistory('insurance'); check_landing('insurance')"
+        class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out">
         بیمه
       </p>
       <div class="relative group">
@@ -94,312 +46,151 @@
             بیشتر
           </p>
           <span class="transition-all ease-out group-hover:rotate-180">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M12 14.88C11.9062 14.88 11.8125 14.8613 11.7188 14.8238C11.625 14.7863 11.5547 14.7375 11.5078 14.6775L7.99219 11.325C7.85156 11.19 7.78125 11.0175 7.78125 10.8075C7.78125 10.5975 7.85156 10.4175 7.99219 10.2675C8.14844 10.1325 8.33594 10.065 8.55469 10.065C8.77344 10.065 8.95312 10.1325 9.09375 10.2675L12.0938 13.1475L15.0938 10.2675C15.25 10.1325 15.4375 10.065 15.6562 10.065C15.875 10.065 16.0547 10.1325 16.1953 10.2675C16.3516 10.4175 16.4297 10.5975 16.4297 10.8075C16.4297 11.0175 16.3516 11.19 16.1953 11.325L12.7031 14.6775C12.5469 14.7375 12.4141 14.7863 12.3047 14.8238C12.1953 14.8613 12.0938 14.88 12 14.88Z"
-                fill="#09090B"
-              />
+                fill="#09090B" />
             </svg>
           </span>
         </div>
         <ul
-          class="hidden z-10 h-fit !absolute right-0 top-full group-hover:!flex flex-col w-48 rounded-xl bg-white shadow border border-primary-500"
-        >
+          class="hidden z-10 h-fit !absolute right-0 top-full group-hover:!flex flex-col w-48 rounded-xl bg-white shadow border border-primary-500">
           <li class="border-b border-primary-500">
-            <a
-              class="px-3 py-2 hover:text-primary-800 w-full block"
-              href="/مجله-گردشگری"
-              >مجله گردشگری</a
-            >
+            <a class="px-3 py-2 hover:text-primary-800 w-full block" href="/مجله-گردشگری">مجله گردشگری</a>
           </li>
           <li class="border-b border-primary-500">
-            <a
-              class="px-3 py-2 hover:text-primary-800 w-full block"
-              href="/ارتباط-با-ما"
-              >ارتباط با ما</a
-            >
+            <a class="px-3 py-2 hover:text-primary-800 w-full block" href="/ارتباط-با-ما">ارتباط با ما</a>
           </li>
           <li class="">
-            <a
-              class="px-3 py-2 hover:text-primary-800 w-full block"
-              href="/تورها"
-            >
-              تورها</a
-            >
+            <a class="px-3 py-2 hover:text-primary-800 w-full block" href="/تورها">
+              تورها</a>
           </li>
         </ul>
       </div>
-    </div>
-    <a
-      href="/"
-      class="flex lg:!w-fit max-sm:!w-[220px] max-sm:!justify-between items-center gap-2 hover:scale-110 transition-all ease-out"
-    >
-      <img
-        loading="lazy"
-        height="22"
-        width="123"
-        src="[##cms.cms.cdn##]/images/baba-nowrouz-text.png"
-        alt="baba-nowrouz-text"
-        class="w-[123px] h-[22px]"
-      />
-      <img
-        loading="lazy"
-        height="58"
-        width="42"
-        src="[##cms.cms.cdn##]/images/logo-new.png"
-        alt="baba-nowrouz-logo"
-        class="w-[42px] h-[58px]"
-      />
+    </nav>
+    <a href="/"
+      class="flex lg:!w-fit max-sm:!w-[220px] max-sm:!justify-between items-center gap-2 hover:scale-110 transition-all ease-out">
+      <img loading="lazy" height="22" width="123" src="[##cms.cms.cdn##]/images/baba-nowrouz-text.png"
+        alt="baba-nowrouz-text" class="w-[123px] h-[22px]" />
+      <img loading="lazy" height="58" width="42" src="[##cms.cms.cdn##]/images/logo-new.png" alt="baba-nowrouz-logo"
+        class="w-[42px] h-[58px]" />
     </a>
   </div>
 </header>
-<div
-  dir="rtl"
-  class="header-menu overflow-scroll p-3 translate-x-[999px] shadow-2xl w-screen bg-white lg:!hidden flex flex-col h-screen fixed top-0 left-0 transition-all duration-500 ease-in-out"
->
+<div dir="rtl"
+  class="header-menu overflow-scroll p-3 translate-x-[999px] shadow-2xl w-screen bg-white lg:!hidden flex flex-col h-screen fixed top-0 left-0 transition-all duration-500 ease-in-out">
   <div dir="rtl" class="w-full flex items-center justify-between">
     <a href="/" class="flex items-center gap-2">
-      <img
-        loading="lazy"
-        height="58"
-        width="42"
-        src="[##cms.cms.cdn##]/images/logo-new.png"
-        alt="baba-nowrouz-logo"
-        class="w-[22px] h-[30px]"
-      />
-      <img
-        loading="lazy"
-        height="22"
-        width="123"
-        src="[##cms.cms.cdn##]/images/baba-nowrouz-text.png"
-        alt="baba-nowrouz-text"
-        class="w-[67px] h-[12px]"
-      />
+      <img loading="lazy" height="58" width="42" src="[##cms.cms.cdn##]/images/logo-new.png" alt="baba-nowrouz-logo"
+        class="w-[22px] h-[30px]" />
+      <img loading="lazy" height="22" width="123" src="[##cms.cms.cdn##]/images/baba-nowrouz-text.png"
+        alt="baba-nowrouz-text" class="w-[67px] h-[12px]" />
     </a>
     <button type="button" class="header-menu-close">
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
           d="M14.334 0C17.723 0 20 2.378 20 5.916V14.084C20 17.622 17.723 20 14.333 20H5.665C2.276 20 0 17.622 0 14.084V5.916C0 2.378 2.276 0 5.665 0H14.334ZM14.334 1.5H5.665C3.135 1.5 1.5 3.233 1.5 5.916V14.084C1.5 16.767 3.135 18.5 5.665 18.5H14.333C16.864 18.5 18.5 16.767 18.5 14.084V5.916C18.5 3.233 16.864 1.5 14.334 1.5ZM8.1305 7.0626L9.998 8.93L11.8645 7.0647C12.1575 6.7717 12.6315 6.7717 12.9245 7.0647C13.2175 7.3577 13.2175 7.8317 12.9245 8.1247L11.058 9.99L12.9265 11.8596C13.2195 12.1526 13.2195 12.6266 12.9265 12.9196C12.7805 13.0666 12.5875 13.1396 12.3965 13.1396C12.2045 13.1396 12.0125 13.0666 11.8665 12.9196L9.998 11.05L8.1325 12.9167C7.9865 13.0637 7.7945 13.1367 7.6025 13.1367C7.4105 13.1367 7.2185 13.0637 7.0725 12.9167C6.7795 12.6237 6.7795 12.1497 7.0725 11.8567L8.938 9.99L7.0705 8.1226C6.7775 7.8296 6.7775 7.3556 7.0705 7.0626C7.3645 6.7696 7.8385 6.7696 8.1305 7.0626Z"
-          fill="#71717A"
-        />
+          fill="#71717A" />
       </svg>
     </button>
   </div>
   <div class="set-login-for-mobile w-full"></div>
   <ul class="w-full flex flex-col mt-3">
-    <p
-      data-id="flight"
-      data-nav="flight"
-      onclick="check_searchHistory('flight'); check_landing('flight')"
-      class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300"
-    >
+    <p data-id="flight" data-nav="flight" onclick="check_searchHistory('flight'); check_landing('flight')"
+      class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300">
       پرواز
-      <svg
-        width="5"
-        height="10"
-        viewBox="0 0 5 10"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
-          fill="#18181B"
-        />
+          fill="#18181B" />
       </svg>
     </p>
-    <p
-      data-id="hotel"
-      data-nav="hotel"
-      onclick="check_searchHistory('hotel'); check_landing('hotel')"
-      class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300"
-    >
+    <p data-id="hotel" data-nav="hotel" onclick="check_searchHistory('hotel'); check_landing('hotel')"
+      class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300">
       هتل
-      <svg
-        width="5"
-        height="10"
-        viewBox="0 0 5 10"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
-          fill="#18181B"
-        />
+          fill="#18181B" />
       </svg>
     </p>
-    <p
-      data-id="flighthotel"
-      data-nav="flighthotel"
+    <p data-id="flighthotel" data-nav="flighthotel"
       onclick="check_searchHistory('flighthotel'); check_landing('flighthotel')"
-      class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300"
-    >
+      class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300">
       هتل+پرواز
-      <svg
-        width="5"
-        height="10"
-        viewBox="0 0 5 10"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
-          fill="#18181B"
-        />
+          fill="#18181B" />
       </svg>
     </p>
-    <p
-      data-id="tour"
-      data-nav="tour"
-      onclick="check_searchHistory('tour'); check_landing('tour')"
-      class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300"
-    >
+    <p data-id="tour" data-nav="tour" onclick="check_searchHistory('tour'); check_landing('tour')"
+      class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300">
       تور
-      <svg
-        width="5"
-        height="10"
-        viewBox="0 0 5 10"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
-          fill="#18181B"
-        />
+          fill="#18181B" />
       </svg>
     </p>
-    <p
-      data-id="train"
-      data-nav="train"
-      onclick="check_searchHistory('train'); check_landing('train')"
-      class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300"
-    >
+    <p data-id="train" data-nav="train" onclick="check_searchHistory('train'); check_landing('train')"
+      class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300">
       قطار
-      <svg
-        width="5"
-        height="10"
-        viewBox="0 0 5 10"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
-          fill="#18181B"
-        />
+          fill="#18181B" />
       </svg>
     </p>
-    <p
-      data-id="insurance"
-      data-nav="insurance"
-      onclick="check_searchHistory('insurance'); check_landing('insurance')"
-      class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300"
-    >
+    <p data-id="insurance" data-nav="insurance" onclick="check_searchHistory('insurance'); check_landing('insurance')"
+      class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300">
       بیمه
-      <svg
-        width="5"
-        height="10"
-        viewBox="0 0 5 10"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
-          fill="#18181B"
-        />
+          fill="#18181B" />
       </svg>
     </p>
 
     <li class="text-sm flex flex-col w-full group">
-      <div
-        class="h-12 text-sm items-center flex justify-between toggle-dropdown"
-      >
+      <div class="h-12 text-sm items-center flex justify-between toggle-dropdown">
         بیشتر
-        <svg
-          width="5"
-          height="10"
-          class="dropdown-icon"
-          viewBox="0 0 5 10"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="5" height="10" class="dropdown-icon" viewBox="0 0 5 10" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
           <path
             d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
-            fill="#18181B"
-          />
+            fill="#18181B" />
         </svg>
       </div>
       <ul
-        class="flex flex-col w-full overflow-hidden transition-all duration-300 divide-y opacity-0 divide-zinc-300 max-h-0"
-      >
-        <li
-          class="h-12 text-sm items-center border-t border-zinc-300 flex justify-between w-full"
-        >
-          <a
-            href="/مجله-گردشگری"
-            class="flex justify-between w-full items-center"
-            >مجله گردشگری
-            <svg
-              width="5"
-              height="10"
-              viewBox="0 0 5 10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+        class="flex flex-col w-full overflow-hidden transition-all duration-300 divide-y opacity-0 divide-zinc-300 max-h-0">
+        <li class="h-12 text-sm items-center border-t border-zinc-300 flex justify-between w-full">
+          <a href="/مجله-گردشگری" class="flex justify-between w-full items-center">مجله گردشگری
+            <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
-                fill="#18181B"
-              />
+                fill="#18181B" />
             </svg>
           </a>
         </li>
         <li class="h-12 text-sm items-center flex justify-between w-full">
-          <a
-            href="/ارتباط-با-ما"
-            class="flex justify-between w-full items-center"
-          >
+          <a href="/ارتباط-با-ما" class="flex justify-between w-full items-center">
             ارتباط با ما
-            <svg
-              width="5"
-              height="10"
-              viewBox="0 0 5 10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
-                fill="#18181B"
-              />
+                fill="#18181B" />
             </svg>
           </a>
         </li>
         <li class="h-12 text-sm items-center flex justify-between w-full">
           <a href="/تورها" class="flex justify-between w-full items-center">
             تورها
-            <svg
-              width="5"
-              height="10"
-              viewBox="0 0 5 10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
-                fill="#18181B"
-              /></svg
-          ></a>
+                fill="#18181B" />
+            </svg></a>
         </li>
       </ul>
     </li>
