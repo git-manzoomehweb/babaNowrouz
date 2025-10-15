@@ -6393,7 +6393,7 @@ video {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
 }
-.Basis_Date_Box  p{
+.Basis_Date_Box p {
   display: none !important;
 }
 @media (min-width: 1024px) {
@@ -6413,7 +6413,7 @@ video {
   #search-box #r-train .reserve-field.h-20.destination-route {
     width: 50% !important;
   }
-  #search-box #r-train .reserve-field.h-20.departure-route{
+  #search-box #r-train .reserve-field.h-20.departure-route {
     padding-left: 20px !important;
   }
   #search-box .add-routs {
@@ -6570,3 +6570,34 @@ video {
   justify-content: center;
 }
 
+.banner-module {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/flight-bg.jpg");
+}
+body.flight .banner-module {
+
+  background-image: url("../images/flight-bg.jpg") !important;
+}
+
+body.hotel .banner-module {
+ 
+  background-image: url("../images/hotel-bg.jpg") !important;
+}
+body.tour .banner-module {
+  
+  background-image: url("../images/tour-bg.jpg") !important;
+}
+body.train .banner-module {
+ 
+  background-image: url("../images/train-bg.jpg") !important;
+}
+body.insurance .banner-module {
+ 
+  background-image: url("../images/insurance-bg.jpg") !important;
+}
+body.flighthotel .banner-module {
+
+  background-image: url("../images/flighthotel-bg.jpg") !important;
+}
