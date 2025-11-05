@@ -24,7 +24,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="theme-color" content="#FCA30E" />
     <link rel="manifest" href="homescreen-manifest.inc">
-    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/babanowrouz.ui.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/babanowrouz-mob.ui.min.css">
     <basis core="call" file="analytics-head.inc" />
     <basis core="call" file="style.inc" pageindex="[##cms.cms.pageindex##]" />
 
@@ -37,51 +37,51 @@
             <h1 class="text-center text-transparent h-0 w-0 invisible">درباره نوآوران پرواز کویر | بابانوروز</h1>
         </div>
         <div class="clear-both"></div>
-        <div class="max-w-7xl mx-auto my-24 w-95per ">
+        <div class="mx-auto my-12 w-95per ">
             <basis core="print" datamembername="db.info">
                 <layout>
                     <article
-                        class="w-full bg-primary-50 rounded-se-xl rounded-es-xl rounded-ee-200px rounded-ss-200px min-h-520px flex justify-between max-xl:flex-wrap gap-5 p-5 max-xl:p-3">
+                        class="w-full bg-primary-50 rounded-se-xl rounded-es-xl rounded-ee-60px rounded-ss-60px p-3 max-xl:p-3">
                         <figure
-                            class="overflow-hidden rounded-se-xl rounded-es-xl rounded-ee-200px rounded-ss-200px w-639px h-489px max-xl:w-full max-xl:mx-auto max-xl:text-center">
-                            <img class="object-cover w-full h-full" src="[##cms.cms.cdn##]/images/about-us.jpg"
-                                width="639" height="489" alt="نوآوران پرواز کویر | بابانوروز">
+                            class="overflow-hidden rounded-se-xl rounded-es-xl rounded-ee-60px rounded-ss-60px h-224px max-xl:w-full max-xl:mx-auto max-xl:text-center">
+                            <img class="object-cover w-full h-full" src="[##cms.cms.cdn##]/images/about-us-mob.jpg"
+                                width="292" height="224" alt="نوآوران پرواز کویر | بابانوروز">
                         </figure>
-                        <div class="w-562px flex flex-col items-center justify-center text-justify max-xl:w-full ">
+                        <div class="w-full flex flex-col items-center justify-center text-justify max-xl:w-full ">
                             <div class="w-full">
-                                <h2 class="text-3xl font-danabold mb-6 ">درباره ما</h2>@child
+                                <h2 class="text-xl font-danaregular mb-6 mt-3">درباره ما</h2>@child
                             </div>
                         </div>
                     </article>
                 </layout>
                 <face filter="TypeID in(144)">
-                    <div class="text-base ">@largetext </div>
+                    <div class="text-sm ">@largetext </div>
                 </face>
             </basis>
             <hr class="my-9 border-neutralcolor-300 ">
-            <div class="w-full flex justify-between flex-wrap  ">
-                <section class="w-1/2 flex justify-between gap-x-3 max-xl:w-full">
+            <div class="w-full  ">
+                <section class="flex flex-col gap-y-3 w-full">
                     <basis core="print" datamembername="db.info">
                         <layout>
-                            <div class="w-1/2 my-auto">@child </div>
+                            <div class="w-full">@child </div>
                         </layout>
-                        <face filter="prpID=91462"><iframe title="لوکیشن بابانوروز"
-                                class="inline align-middle border-0 border-none rounded-2xl my-auto" width="310"
-                                height="180" loading="lazy" allowfullscreen
+                        <face filter="prpID=91462"><iframe
+                                class="block align-middle border-0 border-none rounded-2xl my-auto w-full" width="310"
+                                height="180" loading="lazy" allowfullscreen title="لوکیشن بابا نوروز"
                                 src="https://maps.google.com/maps?q=@largetext,@text&z=14&output=embed"></iframe></face>
                     </basis>
-                    <div class="w-1/2">
+                    <div class="w-full">
                         <basis core="print" datamembername="db.info">
                             <layout>
                                 <section class="w-11/12 ml-auto max-lg:w-95per max-lg:mx-auto">
-                                    <h2 class="text-xl font-danaregular text-right mt-5">ارتباط با ما</h2>
+                                    <h2 class="text-base font-danaregular text-right mt-5">ارتباط با ما</h2>
                                     <div class="text-sm font-danaregular text-neutralcolor-900 mt-2">
                                         <ul class="flex flex-col gap-y-3">@child </ul>
                                     </div>
                                 </section>
                             </layout>
                             <face filter="TypeID in(244)">
-                                <li class="w-96"><a href="http://maps.google.com/?q=@largetext"
+                                <li><a href="http://maps.google.com/?q=@largetext"
                                         class="flex items-center hover:text-primary-700"><svg
                                             class="pl-2 border-l border-neutralcolor-300 w-8 h-8" width="30" height="29"
                                             viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,8 +94,7 @@
                                         </svg><span class="pr-2">@largetext </span></a></li>
                             </face>
                             <face filter="TypeID in(240)">
-                                <li class="w-32"><a href="tel:@text"
-                                        class="flex items-center hover:text-primary-700"><svg
+                                <li><a href="tel:@text" class="flex items-center hover:text-primary-700"><svg
                                             class="pl-2 border-l border-neutralcolor-300 w-8 h-8" width="28" height="27"
                                             viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -104,22 +103,19 @@
                                         </svg><span class="pr-2">@text </span></a></li>
                             </face>
                             <face filter="TypeID in(242) and text not in('')">
-                                <li class="w-full">
-                                    <a href="mailto:@text" class="flex items-center hover:text-primary-700"><svg
+                                <li><a href="mailto:@text" class="flex items-center hover:text-primary-700"><svg
                                             class="pl-2 border-l border-neutralcolor-300 w-8 h-8" width="26" height="26"
                                             viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M18.1474 3.625C19.5443 3.625 20.888 4.17708 21.8766 5.16771C22.8661 6.15625 23.4193 7.48958 23.4193 8.88542V17.1146C23.4193 20.0208 21.0547 22.375 18.1474 22.375H7.85677C4.94948 22.375 2.58594 20.0208 2.58594 17.1146V8.88542C2.58594 5.97917 4.93906 3.625 7.85677 3.625H18.1474ZM19.3255 9.04167C19.1068 9.03021 18.8984 9.10417 18.7411 9.25L14.0443 13C13.4401 13.501 12.5745 13.501 11.9609 13L7.27344 9.25C6.94948 9.01042 6.50156 9.04167 6.23177 9.32292C5.95052 9.60417 5.91927 10.0521 6.15781 10.3646L6.29427 10.5L11.0339 14.1979C11.6172 14.6562 12.3245 14.9062 13.0651 14.9062C13.8036 14.9062 14.5234 14.6562 15.1057 14.1979L19.8047 10.4375L19.888 10.3542C20.137 10.0521 20.137 9.61458 19.8766 9.3125C19.7318 9.15729 19.5328 9.0625 19.3255 9.04167Z"
                                                 fill="#FDB713" />
-                                        </svg><span class="pr-2">@text </span></a>
-                                </li>
+                                        </svg><span class="pr-2">@text </span></a></li>
                             </face>
-
                         </basis>
                     </div>
                 </section>
-                <section class="w-1/2 form-section max-xl:w-full pr-10 py-5">
-                    <h2 class="font-danabold text-3xl text-neutralcolor-950">ارتباط با مشاورین ما</h2><span
+                <section class="w-full form-section pt-5">
+                    <h2 class="font-danaregular text-base text-neutralcolor-950">ارتباط با مشاورین ما</h2><span
                         class="block font-danaregular text-sm text-neutralcolor-700 mb-5">با مشاورین ما در ارتباط
                         باشید.</span>
                     <basis core="call" file="contact-form.inc" pageindex="[##cms.cms.pageindex##]" />
@@ -129,7 +125,7 @@
     </main>
     <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
     <basis core="call" file="script.inc" pageindex="[##cms.cms.pageindex##]" />
-    
+   
 </body>
 
 </html>
