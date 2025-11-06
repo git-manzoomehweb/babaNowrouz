@@ -109,17 +109,28 @@ watchForFlightTypeField((el) => {
 const target = document.querySelector("main");
 document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector(".footer-landing-items")) {
-    const isHomePage = window.location.pathname === "/";
+    const homePaths = [
+      "/",
+      "/flight",
+      "/hotel",
+      "/flighthotel",
+      "/tour",
+      "/train",
+      "/insurance",
+    ];
+
+    const currentPath = window.location.pathname;
+    const isHomePage = homePaths.includes(currentPath);
     const isNotHome = !isHomePage;
 
-    const flightItem = document.querySelectorAll('p[data-id="flight"]');
-    const hotelItem = document.querySelectorAll('p[data-id="hotel"]');
+    const flightItem = document.querySelectorAll('a[data-id="flight"]');
+    const hotelItem = document.querySelectorAll('a[data-id="hotel"]');
     const flightHotelItem = document.querySelectorAll(
-      'p[data-id="flighthotel"]'
+      'a[data-id="flighthotel"]'
     );
-    const tourItem = document.querySelectorAll('p[data-id="tour"]');
-    const trainItem = document.querySelectorAll('p[data-id="train"]');
-    const insuranceItem = document.querySelectorAll('p[data-id="insurance"]');
+    const tourItem = document.querySelectorAll('a[data-id="tour"]');
+    const trainItem = document.querySelectorAll('a[data-id="train"]');
+    const insuranceItem = document.querySelectorAll('a[data-id="insurance"]');
     if (isNotHome) {
       if (flightItem) {
         flightItem.forEach((item) => {
@@ -173,18 +184,21 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       if (flightItem) {
         flightItem.forEach((item) => {
-          item.addEventListener("click", function () {
+          item.addEventListener("click", function (e) {
             if (target) {
+              e.preventDefault();
               target.scrollIntoView({ behavior: "smooth" });
             }
             check_searchHistory("flight");
             check_landing("flight");
+            e.preventDefault();
           });
         });
       }
       if (tourItem) {
         tourItem.forEach((item) => {
-          item.addEventListener("click", function () {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
             if (target) {
               target.scrollIntoView({ behavior: "smooth" });
             }
@@ -195,7 +209,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       if (trainItem) {
         trainItem.forEach((item) => {
-          item.addEventListener("click", function () {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
             if (target) {
               target.scrollIntoView({ behavior: "smooth" });
             }
@@ -206,7 +221,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       if (insuranceItem) {
         insuranceItem.forEach((item) => {
-          item.addEventListener("click", function () {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
             if (target) {
               target.scrollIntoView({ behavior: "smooth" });
             }
@@ -217,7 +233,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       if (flightHotelItem) {
         flightHotelItem.forEach((item) => {
-          item.addEventListener("click", function () {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
             if (target) {
               target.scrollIntoView({ behavior: "smooth" });
             }
@@ -228,7 +245,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       if (hotelItem) {
         hotelItem.forEach((item) => {
-          item.addEventListener("click", function () {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
             if (target) {
               target.scrollIntoView({ behavior: "smooth" });
             }
@@ -916,5 +934,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-

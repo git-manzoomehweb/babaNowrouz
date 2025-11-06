@@ -10,36 +10,36 @@
       </button>
       <div
         class="Login_Information justify-center items-center flex gap-1 whitespace-nowrap w-[163px] h-12 bg-primary-900 rounded-lg">
-        <basis core="call" file="authentication/modal"></basis>
+        <basis core="call" file="authentication/modal" lid="1"></basis>
       </div>
       <!-- ورودثبتنام -->
     </div>
     <nav dir="rtl" class="lg:!flex hidden gap-[59px] items-center">
-      <p data-id="flight" data-nav="flight" onclick="check_searchHistory('flight'); check_landing('flight')"
+      <a data-id="flight" data-nav="flight" onclick="check_searchHistory('flight'); check_landing('flight')"
         class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out">
         پرواز
-      </p>
-      <p data-id="hotel" data-nav="hotel" onclick="check_searchHistory('hotel'); check_landing('hotel')"
+      </a>
+      <a data-id="hotel" data-nav="hotel" onclick="check_searchHistory('hotel'); check_landing('hotel')"
         class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out">
         هتل
-      </p>
-      <p data-id="flighthotel" data-nav="flighthotel"
+      </a>
+      <a data-id="flighthotel" data-nav="flighthotel"
         onclick="check_searchHistory('flighthotel'); check_landing('flighthotel')"
         class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out">
         پرواز + هتل
-      </p>
-      <p data-id="tour" data-nav="tour" onclick="check_searchHistory('tour'); check_landing('tour')"
+      </a>
+      <a data-id="tour" data-nav="tour" onclick="check_searchHistory('tour'); check_landing('tour')"
         class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out">
         تور
-      </p>
-      <p data-id="train" data-nav="train" onclick="check_searchHistory('train'); check_landing('train')"
+      </a>
+      <a data-id="train" data-nav="train" onclick="check_searchHistory('train'); check_landing('train')"
         class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out">
         قطار
-      </p>
-      <p data-id="insurance" data-nav="insurance" onclick="check_searchHistory('insurance'); check_landing('insurance')"
+      </a>
+      <a data-id="insurance" data-nav="insurance" onclick="check_searchHistory('insurance'); check_landing('insurance')"
         class="text-[#09090B] hover:text-primary-900 cursor-pointer transition-all ease-in-out">
         بیمه
-      </p>
+      </a>
       <div class="relative group">
         <div class="flex items-center py-2 gap-3">
           <p class="text-[#09090B] hover:text-primary-900 cursor-pointer">
@@ -96,7 +96,7 @@
   </div>
   <div class="set-login-for-mobile w-full"></div>
   <ul class="w-full flex flex-col mt-3">
-    <p data-id="flight" data-nav="flight" onclick="check_searchHistory('flight'); check_landing('flight')"
+    <a data-id="flight" data-nav="flight" onclick="check_searchHistory('flight'); check_landing('flight')"
       class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300">
       پرواز
       <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,8 +104,8 @@
           d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
           fill="#18181B" />
       </svg>
-    </p>
-    <p data-id="hotel" data-nav="hotel" onclick="check_searchHistory('hotel'); check_landing('hotel')"
+    </a>
+    <a data-id="hotel" data-nav="hotel" onclick="check_searchHistory('hotel'); check_landing('hotel')"
       class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300">
       هتل
       <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,8 +113,8 @@
           d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
           fill="#18181B" />
       </svg>
-    </p>
-    <p data-id="flighthotel" data-nav="flighthotel"
+    </a>
+    <a data-id="flighthotel" data-nav="flighthotel"
       onclick="check_searchHistory('flighthotel'); check_landing('flighthotel')"
       class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300">
       هتل+پرواز
@@ -123,8 +123,8 @@
           d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
           fill="#18181B" />
       </svg>
-    </p>
-    <p data-id="tour" data-nav="tour" onclick="check_searchHistory('tour'); check_landing('tour')"
+    </a>
+    <a data-id="tour" data-nav="tour" onclick="check_searchHistory('tour'); check_landing('tour')"
       class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300">
       تور
       <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,8 +132,8 @@
           d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
           fill="#18181B" />
       </svg>
-    </p>
-    <p data-id="train" data-nav="train" onclick="check_searchHistory('train'); check_landing('train')"
+    </a>
+    <a data-id="train" data-nav="train" onclick="check_searchHistory('train'); check_landing('train')"
       class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300">
       قطار
       <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,8 +141,8 @@
           d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
           fill="#18181B" />
       </svg>
-    </p>
-    <p data-id="insurance" data-nav="insurance" onclick="check_searchHistory('insurance'); check_landing('insurance')"
+    </a>
+    <a data-id="insurance" data-nav="insurance" onclick="check_searchHistory('insurance'); check_landing('insurance')"
       class="h-12 text-sm items-center flex justify-between close-mobile-nav border-b border-zinc-300">
       بیمه
       <svg width="5" height="10" viewBox="0 0 5 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -150,7 +150,7 @@
           d="M0.119995 5C0.119995 4.90625 0.138745 4.8125 0.176245 4.71875C0.213745 4.625 0.262495 4.55469 0.322495 4.50781L3.675 0.992188C3.81 0.851563 3.9825 0.78125 4.1925 0.78125C4.4025 0.78125 4.5825 0.851563 4.7325 0.992188C4.8675 1.14844 4.935 1.33594 4.935 1.55469C4.935 1.77344 4.8675 1.95313 4.7325 2.09375L1.8525 5.09375L4.73249 8.09375C4.8675 8.25 4.93499 8.4375 4.93499 8.65625C4.93499 8.875 4.8675 9.05469 4.73249 9.19531C4.58249 9.35156 4.4025 9.42969 4.19249 9.42969C3.98249 9.42969 3.80999 9.35156 3.67499 9.19531L0.322495 5.70313C0.262495 5.54688 0.213745 5.41406 0.176245 5.30469C0.138745 5.19531 0.119995 5.09375 0.119995 5Z"
           fill="#18181B" />
       </svg>
-    </p>
+    </a>
 
     <li class="text-sm flex flex-col w-full group">
       <div class="h-12 text-sm items-center flex justify-between toggle-dropdown">

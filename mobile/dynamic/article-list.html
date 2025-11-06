@@ -210,7 +210,7 @@
                         <face filter="(@sta='pre')and('[##cms.cms.pageurl##]'='')">
                             <li
                                 class="flex flex-col justify-center items-center page-no w-10 h-10 border border-neutralcolor-300 hover:bg-primary-500 hover:border-primary-500 hover:text-neutralcolor-950 leading-10 text-base mx-1.5 mb-2.5 text-neutralcolor-700 prev-page cursor-pointer">
-                                <a href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-left"><svg width="25"
+                                <a href="/[##cms.request.url##]?pagenum=@page" aria-label="angle-left"><svg width="25"
                                         height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
                                             d="M8.2623 11.692C8.0395 11.9149 7.9275 12.2074 7.9275 12.5C7.9275 12.7926 8.0395 13.0851 8.2623 13.308L15.1192 20.1649C15.5661 20.6117 16.2883 20.6117 16.7352 20.1649C17.182 19.718 17.182 18.9958 16.7352 18.5489L10.6863 12.5L16.7352 6.45107C17.182 6.00423 17.182 5.28197 16.7352 4.83513C16.2883 4.38829 15.5661 4.38829 15.1192 4.83513L8.2623 11.692Z"
@@ -232,7 +232,7 @@
                         <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'='')">
                             <li
                                 class="page-no w-10 h-10 leading-10 text-base mx-1.5 mb-2.5 text-neutralcolor-950 bg-primary-500 border-primary-500 inline-block">
-                                <a class="current leading-10" href="/[##cms.cms.link_page##]&pagenum=@page">@page</a>
+                                <a class="current leading-10" href="/[##cms.request.url##]?pagenum=@page">@page</a>
                             </li>
                         </face>
                         <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'<>'')">
@@ -244,7 +244,7 @@
                             filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'='') ">
                             <li
                                 class="page-no w-10 h-10 border border-neutralcolor-300 hover:bg-primary-500 hover:border-primary-500 hover:text-neutralcolor-950 leading-10 text-base mx-1.5 mb-2.5 text-neutralcolor-600 inline-block cursor-pointer">
-                                <a class="leading-10" href="/[##cms.cms.link_page##]&pagenum=@page">@page</a></li>
+                                <a class="leading-10" href="/[##cms.request.url##]?pagenum=@page">@page</a></li>
                         </face>
                         <face
                             filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'<>'') ">
@@ -257,7 +257,7 @@
                         <face filter="(@sta='nex') and ('[##cms.cms.pageurl##]'='')">
                             <li
                                 class="flex flex-col justify-center items-center page-no next-page w-10 h-10 border border-neutralcolor-300 hover:bg-primary-500 hover:border-primary-500 hover:text-neutralcolor-950 leading-10 text-base mx-1.5 mb-2.5 text-neutralcolor-700 cursor-pointer">
-                                <a href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-right"><svg
+                                <a href="/[##cms.request.url##]?pagenum=@page" aria-label="angle-right"><svg
                                         width="25" height="25" viewBox="0 0 25 25" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -286,7 +286,7 @@
     <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
     <!-- footer end-->
 
-   
+  
 </body>
 
 </html>
