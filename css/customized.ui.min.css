@@ -1005,7 +1005,7 @@ input {
 .searchHistory-content.fa-lang .sub-title {
   color: var(--neutral-950);
 }
-.searchHistory-content{display: none !important;}
+/* .searchHistory-content{display: none !important;} */
 .route-minus-btn:hover {
   background-color: var(--error-100);
   cursor: pointer;
@@ -2378,7 +2378,7 @@ input,
   --secondary-800: #2d7d8a;
   --secondary-700: #3291a2;
   --secondary-600: #38a6bc;
-  --secondary-500: #3cbc6f;
+  --secondary-500: #3ca6bc;
   --secondary-400: #45c0d7;
   --secondary-300: #5ccbd7;
   --secondary-200: #86dae9;
@@ -2705,3 +2705,13 @@ body.insurance .insurance-bg {
 
 
 
+/* urgent added */
+.book-card__btn{
+  color: var(--secondary-950) !important;
+  border-color: var(--secondary-950) !important;
+}
+.book-count__api__content {
+  color: var(--secondary-950) !important;
+}
+
+/* urgent added */

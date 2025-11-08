@@ -56,6 +56,22 @@
     <main class="dir-rtl">
         <div class="h-12 w-full bg-primary-600"> </div>
         <section class="mx-auto mt-5 w-95per">
+            <ul class="flex gap-2 text-sm items-center">
+                <li>
+                    <a href="/" class="text-[#09090B] hover:text-primary-900">صفحه اصلی</a>
+                </li>
+                <li>/</li>
+                <li>
+                    <a href="/مجله-گردشگری" class="text-[#09090B] hover:text-primary-900"> مجله گردشگری</a>
+                </li>
+                <li>/</li>
+                <basis core="print" datamembername="db.view">
+
+                    <face filter="TypeID in(150)">
+                        <li class="text-[#09090B]">@text</li>
+                    </face>
+                </basis>
+            </ul>
             <figure class="relative overflow-hidden h-40 rounded-xl ">
                 <basis core="print" datamembername="db.gallery">
                     <face filter="ord in(1)">
@@ -63,20 +79,34 @@
                             width="1280" height="538" alt="@name">
                     </face>
                 </basis>
-                <basis core="print" datamembername="db.view">
-                    <face filter="TypeID in(150)">
-                        <figcaption
-                            class="bg-gradient-to-t from-black to-transparent h-16 absolute bottom-0 left-0 right-0 px-4 pt-5">
-                            <h1 class="text-white text-base font-bold">@text </h1>
+                <figcaption
+                    class="bg-gradient-to-t from-black to-transparent h-16 absolute bottom-0 left-0 right-0 px-4 pt-5">
+                    <div class="flex w-full justify-between items-center gap-2">
+                        <basis core="print" datamembername="db.view">
+                            <face filter="TypeID in(150)">
 
-                        </figcaption>
-                    </face>
-                </basis>
+                                <h1 class="text-white text-base font-bold">@text </h1>
+
+
+                            </face>
+                        </basis>
+                      
+                    </div>
+                </figcaption>
 
             </figure>
         </section>
         <div class="mx-auto mt-5 dir-rtl w-95per">
             <div class="w-full">
+                  <basis core="print" datamembername="db.view">
+
+                            <face filter="Question in('تاریخ انتشار')">
+                                <div class="flex gap-2   mt-4 text-sm items-center">
+                                    <span>تاریخ انتشار : </span>
+                                    <span>@text</span>
+                                </div>
+                            </face>
+                        </basis>
                 <basis core="print" datamembername="db.view">
                     <layout>
                         <section class="text-contents text-justify">@child </section>
@@ -345,7 +375,7 @@
     <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js"></script>
     <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]" />
     <script type="application/ld+json">[##db.json.Column1##]</script>
-   
+
 </body>
 
 </html>
