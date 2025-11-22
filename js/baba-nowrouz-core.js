@@ -49,61 +49,61 @@ document.addEventListener("DOMContentLoaded", function () {
 // ____________________________________
 // ____________________________________
 // ____________________________________
-function watchForFlightTypeField(callback) {
-  const observer = new MutationObserver((mutationsList) => {
-    for (const mutation of mutationsList) {
-      for (const node of mutation.addedNodes) {
-        if (node.nodeType === Node.ELEMENT_NODE) {
-          if (node.matches(".flighttype-field")) {
-            callback(node);
-          }
+// function watchForFlightTypeField(callback) {
+//   const observer = new MutationObserver((mutationsList) => {
+//     for (const mutation of mutationsList) {
+//       for (const node of mutation.addedNodes) {
+//         if (node.nodeType === Node.ELEMENT_NODE) {
+//           if (node.matches(".flighttype-field")) {
+//             callback(node);
+//           }
 
-          const matches = node.querySelectorAll(".flighttype-field");
-          matches.forEach((match) => callback(match));
-        }
-      }
-    }
-  });
+//           const matches = node.querySelectorAll(".flighttype-field");
+//           matches.forEach((match) => callback(match));
+//         }
+//       }
+//     }
+//   });
 
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true,
-  });
+//   observer.observe(document.body, {
+//     childList: true,
+//     subtree: true,
+//   });
 
-  document.querySelectorAll(".flighttype-field").forEach(callback);
-}
-watchForFlightTypeField((el) => {
-  const liObserver = new MutationObserver((mutationsList) => {
-    for (const mutation of mutationsList) {
-      if (
-        mutation.type === "attributes" &&
-        mutation.attributeName === "class"
-      ) {
-        const target = mutation.target;
-        if (target.classList.contains("active-module")) {
-          const navValue = target.getAttribute("data-nav");
-          if (navValue) {
-            document.querySelectorAll(".reservation-item li").forEach((li) => {
-              const val = li.getAttribute("data-nav");
-              if (val) {
-                document.body.classList.remove(val);
-              }
-            });
-            document.body.classList.add(navValue);
-          }
-        }
-      }
-    }
-  });
+//   document.querySelectorAll(".flighttype-field").forEach(callback);
+// }
+// watchForFlightTypeField((el) => {
+//   const liObserver = new MutationObserver((mutationsList) => {
+//     for (const mutation of mutationsList) {
+//       if (
+//         mutation.type === "attributes" &&
+//         mutation.attributeName === "class"
+//       ) {
+//         const target = mutation.target;
+//         if (target.classList.contains("active-module")) {
+//           const navValue = target.getAttribute("data-nav");
+//           if (navValue) {
+//             document.querySelectorAll(".reservation-item li").forEach((li) => {
+//               const val = li.getAttribute("data-nav");
+//               if (val) {
+//                 document.body.classList.remove(val);
+//               }
+//             });
+//             document.body.classList.add(navValue);
+//           }
+//         }
+//       }
+//     }
+//   });
 
-  const reservationItems = document.querySelectorAll(".reservation-item li");
-  reservationItems.forEach((li) => {
-    liObserver.observe(li, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-  });
-});
+//   const reservationItems = document.querySelectorAll(".reservation-item li");
+//   reservationItems.forEach((li) => {
+//     liObserver.observe(li, {
+//       attributes: true,
+//       attributeFilter: ["class"],
+//     });
+//   });
+// });
 // _______________________________
 // _______________________________
 const target = document.querySelector("main");

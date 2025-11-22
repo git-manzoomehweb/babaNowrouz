@@ -6570,34 +6570,34 @@ video {
   justify-content: center;
 }
 
-.banner-module {
+.module-banner-background {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-image: url("../images/flight-bg.jpg");
 }
-body.flight .banner-module {
+.module-banner-background.flight-banner-background {
 
   background-image: url("../images/flight-bg.jpg") !important;
 }
 
-body.hotel .banner-module {
+ .module-banner-background.hotel-banner-background {
  
   background-image: url("../images/hotel-bg.jpg") !important;
 }
-body.tour .banner-module {
+ .module-banner-background.tour-banner-background {
   
   background-image: url("../images/tour-bg.jpg") !important;
 }
-body.train .banner-module {
+ .module-banner-background.train-banner-background {
  
   background-image: url("../images/train-bg.jpg") !important;
 }
-body.insurance .banner-module {
+.module-banner-background.insurance-banner-background {
  
   background-image: url("../images/insurance-bg.jpg") !important;
 }
-body.flighthotel .banner-module {
+ .module-banner-background.flighthotel-banner-background {
 
   background-image: url("../images/flighthotel-bg.jpg") !important;
 }
