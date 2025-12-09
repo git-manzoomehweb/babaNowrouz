@@ -1470,7 +1470,7 @@ footer .social-media a svg {
 .common-question .box.active #answer {
   display: flex !important;
   padding-bottom: 25px;
-  animation: fadeIn 0.2s ease-in-out forwards;
+  /* animation: fadeIn 0.2s ease-in-out forwards; */
 }
 
 .common-question .box #answer,
