@@ -746,6 +746,9 @@ video {
 .pt-12 {
   padding-top: 3rem;
 }
+.pb-12 {
+  padding-bottom: 3rem;
+}
 .text-left {
   text-align: left;
 }
@@ -2715,3 +2718,39 @@ body.insurance .insurance-bg {
 }
 
 /* urgent added */
+
+
+
+
+.grid {
+  display: grid;
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+ 
+@media not all and (min-width: 768px) {
+  .max-md\:\!grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+footer .flight-landing-container li{
+  position: relative;
+  padding-right: 6px;
+  display: flex;
+  align-items: center;
+}
+footer .flight-landing-container li::before{
+  content: '';
+  position: absolute;
+  right: -10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: var(--secondary) !important;
+}
+.flight-landing #search-box .reservation-item,
+.flight-landing #search-box  .search-nav
+{
+display: none !important;
+}
