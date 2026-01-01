@@ -2754,3 +2754,6 @@ footer .flight-landing-container li::before{
 {
 display: none !important;
 }
+.flight-landing .searchHistory-content{
+  display: none !important;
+}
