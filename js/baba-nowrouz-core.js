@@ -11,27 +11,40 @@ document.addEventListener("DOMContentLoaded", function () {
             var container = document.getElementById("search-box");
             container.innerHTML = xhrobj.responseText;
 
+            if (document.querySelector("body.flight-landing")) {
+              const depName = document.querySelector(".dep-name").innerText;
+              const desName = document.querySelector(".des-name").innerText;
 
-            if(document.querySelector("body.flight-landing")){
-              const depName=document.querySelector(".dep-name").innerText
-              const desName=document.querySelector(".des-name").innerText
+              const depId = document.querySelector(".dep-id").innerText;
+              const desId = document.querySelector(".des-id").innerText;
 
-              const depId=document.querySelector(".dep-id").innerText
-              const desId=document.querySelector(".des-id").innerText
+              console.log(
+                "depname:",
+                depName,
+                "desname:",
+                desName,
+                "depid:",
+                depId,
+                "desid:",
+                desId
+              );
 
-              console.log("depname:",depName,"desname:",desName,"depid:",depId,"desid:",desId);
-              
+              document.querySelector("#r-flight .departure").value = depName;
+              document.querySelector("#r-flight .destination").value = desName;
 
-              document.querySelector("#r-flight .departure").value=depName
-              document.querySelector("#r-flight .destination").value=desName
-
-              document.querySelector('#r-flight .departure-route .locationId.from').value=depId
-              document.querySelector('#r-flight .destination-route .locationId.to').value=desId
+              document.querySelector(
+                "#r-flight .departure-route .locationId.from"
+              ).value = depId;
+              document.querySelector(
+                "#r-flight .destination-route .locationId.to"
+              ).value = desId;
 
               console.log(document.querySelector("#r-flight .departure").value);
-              console.log( document.querySelector('#r-flight .departure-route .locationId.from').value);
-              
-              
+              console.log(
+                document.querySelector(
+                  "#r-flight .departure-route .locationId.from"
+                ).value
+              );
             }
 
             // Re-run inline scripts in response
@@ -69,6 +82,65 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchEngine();
   }
 });
+
+function observeSearchHistory() {
+  const flightLanding = document.querySelector(".flight-landing");
+
+  if (flightLanding) {
+    const observer = new MutationObserver((mutationsList) => {
+      mutationsList.forEach((mutation) => {
+        if (mutation.type === "childList") {
+          const searchHistoryContents = document.querySelectorAll(
+            ".searchHistory-content"
+          );
+
+          searchHistoryContents.forEach((item) => item.remove());
+
+          const depName = document.querySelector(".dep-name").innerText;
+          const desName = document.querySelector(".des-name").innerText;
+
+          const depId = document.querySelector(".dep-id").innerText;
+          const desId = document.querySelector(".des-id").innerText;
+
+          console.log(
+            "depname:",
+            depName,
+            "desname:",
+            desName,
+            "depid:",
+            depId,
+            "desid:",
+            desId
+          );
+
+          document.querySelector("#r-flight .departure").value = depName;
+          document.querySelector("#r-flight .destination").value = desName;
+
+          document.querySelector(
+            "#r-flight .departure-route .locationId.from"
+          ).value = depId;
+          document.querySelector(
+            "#r-flight .destination-route .locationId.to"
+          ).value = desId;
+
+          console.log(document.querySelector("#r-flight .departure").value);
+          console.log(
+            document.querySelector(
+              "#r-flight .departure-route .locationId.from"
+            ).value
+          );
+        }
+      });
+    });
+
+    const config = { childList: true, subtree: true };
+
+    observer.observe(flightLanding, config);
+  }
+}
+
+observeSearchHistory();
+
 // ____________________________________
 // ____________________________________
 // ____________________________________
